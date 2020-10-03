@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="Label1" runat="server" Text="Movies"></asp:Label>
-            <asp:HyperLink ID="HyperLink1" runat="server">Manage movies</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/ManageMovies">Manage movies</asp:HyperLink>
             <asp:ListView ID="ListView1" runat="server" DataSourceID="MoviesListSqlDataSource" DataKeyNames="Id">
                 <AlternatingItemTemplate>
                     <tr style="background-color:#FFF8DC;">
