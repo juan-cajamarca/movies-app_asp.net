@@ -170,7 +170,7 @@
             </asp:ListView>
             <asp:SqlDataSource ID="MoviesListSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:MoviesListConnectionString %>" SelectCommand="SELECT * FROM [Movie]"></asp:SqlDataSource>
             <asp:Label ID="Label2" runat="server" Text="Directors"></asp:Label>
-            <asp:HyperLink ID="HyperLink2" runat="server">Manage directors</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="/ManageDirectors">Manage directors</asp:HyperLink>
         </div>
         <asp:ListView ID="ListView2" runat="server" DataKeyNames="Id" DataSourceID="DirectorsListSqlDataSource">
             <AlternatingItemTemplate>
@@ -282,7 +282,7 @@
         </asp:ListView>
         <asp:SqlDataSource ID="DirectorsListSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:MoviesListConnectionString %>" SelectCommand="SELECT * FROM [Director]"></asp:SqlDataSource>
         <asp:Label ID="Label3" runat="server" Text="Categories"></asp:Label>
-        <asp:HyperLink ID="HyperLink3" runat="server">Manage categories</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="/ManageCategories">Manage categories</asp:HyperLink>
         <asp:ListView ID="ListView3" runat="server" DataKeyNames="Id" DataSourceID="CategoriesListSqlDataSource">
             <AlternatingItemTemplate>
                 <tr style="background-color:#FFF8DC;">

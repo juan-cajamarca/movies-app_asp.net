@@ -129,6 +129,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="ManageCategories.aspx" />
     <Content Include="ManageDirectors.aspx" />
     <Content Include="ManageMovies.aspx" />
     <Content Include="Movies.aspx" />
@@ -192,6 +193,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ManageCategories.aspx.cs">
+      <DependentUpon>ManageCategories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageCategories.aspx.designer.cs">
+      <DependentUpon>ManageCategories.aspx</DependentUpon>
     </Compile>
     <Compile Include="ManageDirectors.aspx.cs">
       <DependentUpon>ManageDirectors.aspx</DependentUpon>
