@@ -13,7 +13,7 @@
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/ManageMovies">Manage movies</asp:HyperLink>
             <asp:ListView ID="ListView1" runat="server" DataSourceID="MoviesListSqlDataSource" DataKeyNames="Id">
                 <AlternatingItemTemplate>
-                    <tr style="background-color:#FFF8DC;">
+                    <tr style="">
                         <td>
                             <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
                         </td>
@@ -34,12 +34,12 @@
                             <asp:Label ID="CategoryLabel" runat="server" Text='<%# Eval("Category") %>' />
                         </td>
                         <td>
-                            <a href="#">Details <%# Eval("Id") %></a>
+                            <asp:HyperLink ID="CustomHyperLink2" runat="server" NavigateUrl=<%# "/MovieDetails?movieId=" + Eval("Id") %>>Details</asp:HyperLink>
                         </td>
                     </tr>
                 </AlternatingItemTemplate>
                 <EditItemTemplate>
-                    <tr style="background-color:#008A8C;color: #FFFFFF;">
+                    <tr style="">
                         <td>
                             <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
                             <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
@@ -65,7 +65,7 @@
                     </tr>
                 </EditItemTemplate>
                 <EmptyDataTemplate>
-                    <table runat="server" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;">
+                    <table runat="server" style="">
                         <tr>
                             <td>No data was returned.</td>
                         </tr>
@@ -98,7 +98,7 @@
                     </tr>
                 </InsertItemTemplate>
                 <ItemTemplate>
-                    <tr style="background-color:#DCDCDC;color: #000000;">
+                    <tr style="">
                         <td>
                             <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
                         </td>
@@ -118,7 +118,7 @@
                             <asp:Label ID="CategoryLabel" runat="server" Text='<%# Eval("Category") %>' />
                         </td>
                         <td>
-                            <a href="#">Details <%# Eval("Id") %></a>
+                            <asp:HyperLink ID="CustomHyperLink1" runat="server" NavigateUrl=<%# "/MovieDetails?movieId=" + Eval("Id") %>>Details</asp:HyperLink>
                         </td>
                     </tr>
                 </ItemTemplate>
@@ -126,8 +126,8 @@
                     <table runat="server">
                         <tr runat="server">
                             <td runat="server">
-                                <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
-                                    <tr runat="server" style="background-color:#DCDCDC;color: #000000;">
+                                <table id="itemPlaceholderContainer" runat="server" border="0" style="">
+                                    <tr runat="server" style="">
                                         <th runat="server">Id</th>
                                         <th runat="server">Title</th>
                                         <th runat="server">Duration</th>
@@ -141,12 +141,12 @@
                             </td>
                         </tr>
                         <tr runat="server">
-                            <td runat="server" style="text-align: center;background-color: #CCCCCC;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000;"></td>
+                            <td runat="server" style=""></td>
                         </tr>
                     </table>
                 </LayoutTemplate>
                 <SelectedItemTemplate>
-                    <tr style="background-color:#008A8C;font-weight: bold;color: #FFFFFF;">
+                    <tr style="">
                         <td>
                             <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
                         </td>
@@ -174,7 +174,7 @@
         </div>
         <asp:ListView ID="ListView2" runat="server" DataKeyNames="Id" DataSourceID="DirectorsListSqlDataSource">
             <AlternatingItemTemplate>
-                <tr style="background-color:#FFF8DC;">
+                <tr style="">
                     <td>
                         <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
                     </td>
@@ -185,12 +185,12 @@
                         <asp:Label ID="LastNameLabel" runat="server" Text='<%# Eval("LastName") %>' />
                     </td>
                     <td>
-                        <a href="#">Details <%# Eval("Id") %></a>
+                        <asp:HyperLink ID="CustomHyperLink3" runat="server" NavigateUrl=<%# "/DirectorDetails?directorId=" + Eval("Id") %>>Details</asp:HyperLink>
                     </td>
                 </tr>
             </AlternatingItemTemplate>
             <EditItemTemplate>
-                <tr style="background-color:#008A8C;color: #FFFFFF;">
+                <tr style="">
                     <td>
                         <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
@@ -207,7 +207,7 @@
                 </tr>
             </EditItemTemplate>
             <EmptyDataTemplate>
-                <table runat="server" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;">
+                <table runat="server" style="">
                     <tr>
                         <td>No data was returned.</td>
                     </tr>
@@ -231,7 +231,7 @@
                 </tr>
             </InsertItemTemplate>
             <ItemTemplate>
-                <tr style="background-color:#DCDCDC;color: #000000;">
+                <tr style="">
                     <td>
                         <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
                     </td>
@@ -242,7 +242,7 @@
                         <asp:Label ID="LastNameLabel" runat="server" Text='<%# Eval("LastName") %>' />
                     </td>
                     <td>
-                        <a href="#">Details <%# Eval("Id") %></a>
+                        <asp:HyperLink ID="CustomHyperLink4" runat="server" NavigateUrl=<%# "/DirectorDetails?directorId=" + Eval("Id") %>>Details</asp:HyperLink>
                     </td>
                 </tr>
             </ItemTemplate>
@@ -250,8 +250,8 @@
                 <table runat="server">
                     <tr runat="server">
                         <td runat="server">
-                            <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
-                                <tr runat="server" style="background-color:#DCDCDC;color: #000000;">
+                            <table id="itemPlaceholderContainer" runat="server" border="0" style="">
+                                <tr runat="server" style="">
                                     <th runat="server">Id</th>
                                     <th runat="server">Name</th>
                                     <th runat="server">LastName</th>
@@ -262,12 +262,12 @@
                         </td>
                     </tr>
                     <tr runat="server">
-                        <td runat="server" style="text-align: center;background-color: #CCCCCC;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000;"></td>
+                        <td runat="server" style=""></td>
                     </tr>
                 </table>
             </LayoutTemplate>
             <SelectedItemTemplate>
-                <tr style="background-color:#008A8C;font-weight: bold;color: #FFFFFF;">
+                <tr style="">
                     <td>
                         <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
                     </td>
@@ -285,7 +285,7 @@
         <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="/ManageCategories">Manage categories</asp:HyperLink>
         <asp:ListView ID="ListView3" runat="server" DataKeyNames="Id" DataSourceID="CategoriesListSqlDataSource">
             <AlternatingItemTemplate>
-                <tr style="background-color:#FFF8DC;">
+                <tr style="">
                     <td>
                         <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
                     </td>
@@ -293,12 +293,12 @@
                         <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
                     </td>
                     <td>
-                        <a href="#">Details <%# Eval("Id") %></a>
+                        <asp:HyperLink ID="CustomHyperLink5" runat="server" NavigateUrl=<%# "/CategoryDetails?categoryId=" + Eval("Id") %>>Details</asp:HyperLink>
                     </td>
                 </tr>
             </AlternatingItemTemplate>
             <EditItemTemplate>
-                <tr style="background-color:#008A8C;color: #FFFFFF;">
+                <tr style="">
                     <td>
                         <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
@@ -312,7 +312,7 @@
                 </tr>
             </EditItemTemplate>
             <EmptyDataTemplate>
-                <table runat="server" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;">
+                <table runat="server" style="">
                     <tr>
                         <td>No data was returned.</td>
                     </tr>
@@ -333,7 +333,7 @@
                 </tr>
             </InsertItemTemplate>
             <ItemTemplate>
-                <tr style="background-color:#DCDCDC;color: #000000;">
+                <tr style="">
                     <td>
                         <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
                     </td>
@@ -341,7 +341,7 @@
                         <asp:Label ID="NameLabel" runat="server" Text='<%# Eval("Name") %>' />
                     </td>
                     <td>
-                        <a href="#">Details <%# Eval("Id") %></a>
+                        <asp:HyperLink ID="CustomHyperLink5" runat="server" NavigateUrl=<%# "/CategoryDetails?categoryId=" + Eval("Id") %>>Details</asp:HyperLink>
                     </td>
                 </tr>
             </ItemTemplate>
@@ -349,8 +349,8 @@
                 <table runat="server">
                     <tr runat="server">
                         <td runat="server">
-                            <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
-                                <tr runat="server" style="background-color:#DCDCDC;color: #000000;">
+                            <table id="itemPlaceholderContainer" runat="server" border="0" style="">
+                                <tr runat="server" style="">
                                     <th runat="server">Id</th>
                                     <th runat="server">Name</th>
                                 </tr>
@@ -360,12 +360,12 @@
                         </td>
                     </tr>
                     <tr runat="server">
-                        <td runat="server" style="text-align: center;background-color: #CCCCCC;font-family: Verdana, Arial, Helvetica, sans-serif;color: #000000;"></td>
+                        <td runat="server" style=""></td>
                     </tr>
                 </table>
             </LayoutTemplate>
             <SelectedItemTemplate>
-                <tr style="background-color:#008A8C;font-weight: bold;color: #FFFFFF;">
+                <tr style="">
                     <td>
                         <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
                     </td>

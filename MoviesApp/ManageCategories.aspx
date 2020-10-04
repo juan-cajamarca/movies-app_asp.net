@@ -11,6 +11,7 @@
         <div>
             <asp:Label ID="Label1" runat="server" Text="Manage categories"></asp:Label>
         </div>
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="/Movies">&lt; Home</asp:HyperLink>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="CategoriesGridSqlDataSource">
             <Columns>
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
